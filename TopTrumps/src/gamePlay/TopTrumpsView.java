@@ -25,7 +25,7 @@ public class TopTrumpsView {
     public void checkNoPlayers() {														 // method that prints error message if invalid input entered				
         System.out.println("\t\t**INVALID INPUT**.  " +
             "\nPlease enter a valid number after the colon. Choose between 2"
-            + "and 5 players:");
+            + " and 5 players:");
     }
     
     public void printSelectPlayerNo() {												 // Asks how many AI players to play against
