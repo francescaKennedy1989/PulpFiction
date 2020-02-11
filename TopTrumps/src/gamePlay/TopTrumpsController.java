@@ -20,8 +20,8 @@ public class TopTrumpsController {
 		view.choosePlayOrStats();							// then calls view to display options
 		playerInput = scanner.nextInt();					// takes user input
 		
-		while (!(playerInput == 1) && !(playerInput == 2)) {	//while the user doesn't enter 1 or 2
-			view.checkInput();									// method printing error message from view is displayed
+		while (!(playerInput == 1) && !(playerInput == 2)) {		//while the user doesn't enter 1 or 2
+			view.checkInput();							// method printing error message from view is displayed
 			playerInput = scanner.nextInt();					// then allows user to input
 			
 		}
@@ -33,7 +33,7 @@ public class TopTrumpsController {
 			noPlayers = 0;										// player numbers set to 0
 			view.printSelectPlayerNo();
 			noPlayers = scanner.nextInt();
-			while ((noPlayers > 2) && (noPlayers > 5)) {
+			while ((noPlayers < 2) || (noPlayers > 5)) {		//loop that shows error message if invalid no of players entered
 				view.checkNoPlayers();
 				noPlayers = scanner.nextInt();
 			}
