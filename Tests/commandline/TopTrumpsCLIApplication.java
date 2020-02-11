@@ -15,7 +15,7 @@ public class TopTrumpsCLIApplication {
      * @throws SQLException 
      */
     public static void main(String[] args) throws SQLException {
-        //final DatabaseConnection connection = new DatabaseConnection();
+        final DatabaseConnection connection = new DatabaseConnection();
         Scanner scanner = new Scanner(System.in);
 
         boolean writeGameLogsToFile = false; // Should we write game logs to file?
@@ -23,6 +23,8 @@ public class TopTrumpsCLIApplication {
 
         // State
         boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
+        Controller controller = new Controller();
+        controller.play();
 
         // Loop until the user wants to exit the game
         while (!userWantsToQuit) {
@@ -30,9 +32,10 @@ public class TopTrumpsCLIApplication {
             // ----------------------------------------------------
             // Add your game logic here based on the requirements
             // ----------------------------------------------------
-            Controller controller = new Controller();
-            controller.play();
+//            Controller controller = new Controller();
+//            controller.play();
         }
+        
         userWantsToQuit = true; // use this when the user wants to exit the game
 
     }
